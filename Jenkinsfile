@@ -36,12 +36,6 @@ pipeline {
         script {
           env.PROCEED = input message: 'Proceed to release the work to Prod Env ?'
         }
-script {
-        // Show the select input modal
-       def INPUT_PARAMS = input message: 'Please Provide Parameters', ok: 'Next',
-                        parameters: [
-                        choice(name: 'IMAGE_TAG', choices: getDockerImages(), description: 'Available Docker Images')]
-    }
         echo "Proceed to release the work to Prod Env ?"
       }
     }
