@@ -1,4 +1,5 @@
 pipeline {
+  agent { docker { image 'maven:3.8.4-openjdk-11-slim' }
   stages {
     stage('2183322c-Stage1') {
       steps {
