@@ -16,7 +16,7 @@ pipeline {
     stage('2183322c-Stage3') {
 	agent {
 	docker {
-	image '2183322c-image'
+	image '2183322c-image:latest'
 }
 }
       steps {
