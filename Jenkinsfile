@@ -21,14 +21,16 @@ pipeline {
       }
     }
     stage('2183322c-Stage4') {
-        parallel(
-          '2183322c-Test1': {
-            echo "App Test 1 Success - 2183322c Stage 4C Completed"
+        parallel{
+          stage('2183322c-Test1') {
+		steps{
+            echo "App Test 1 Success - 2183322c Stage 4C Completed"}
           },
-          '2183322c-Test2': {
-            echo "App Test 1 Success - 2183322c Stage 4B Completed"
+          stage('2183322c-Test2') {
+		steps{
+            echo "App Test 1 Success - 2183322c Stage 4B Completed"}
           }
-        )
+        }
       
     }
     stage('2183322c-Stage5') {
