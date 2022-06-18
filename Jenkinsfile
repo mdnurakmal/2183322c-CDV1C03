@@ -25,7 +25,7 @@ pipeline {
           stage('2183322c-Test1') {
 		steps{
             echo "App Test 1 Success - 2183322c Stage 4C Completed"}
-          },
+          }
           stage('2183322c-Test2') {
 		steps{
             echo "App Test 1 Success - 2183322c Stage 4B Completed"}
