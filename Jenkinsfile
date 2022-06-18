@@ -44,13 +44,13 @@ pipeline {
       }
     }
     stage('2183322c-Stage6') {
-      if [$ {
-        env.USERNAME
-      } == 'PROCEED']
-      then
-      echo "2183322c - Work Releases to Prod Env"
-      else
-        Abor
+      if ($ {
+          env.USERNAME
+        } == 'PROCEED') {
+        echo "2183322c - Work Releases to Prod Env"
+      } else {
+        Abort
+      }
     }
   }
 }
