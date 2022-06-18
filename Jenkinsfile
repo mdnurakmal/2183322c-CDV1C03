@@ -10,8 +10,7 @@ pipeline {
     stage('2183322c-Stage2') {
 
       steps {
-	script{
-	whoami}
+
         echo "Email Triggered - 2183322c Stage 2 Completed"
       }
     }
