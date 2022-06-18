@@ -15,7 +15,9 @@ pipeline {
     }
     stage('2183322c-Stage3') {
       steps {
+	script{
         docker run - d--name 218332 c - test - t 2183322 c - image
+}
         echo "Application Setup - 2183322c Stage 3 Completed"
       }
     }
