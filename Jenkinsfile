@@ -14,7 +14,6 @@ pipeline {
     }
     stage('2183322c-Stage3') {
       steps {
-        docker build - t 2183322 c - image.
         docker run - d--name 218332 c - test - t 2183322 c - image
         echo "Application Setup - 2183322c Stage 3 Completed"
       }
@@ -44,13 +43,16 @@ pipeline {
       }
     }
     stage('2183322c-Stage6') {
-      if ($ {
-          env.USERNAME
-        } == 'PROCEED') {
-        echo "2183322c - Work Releases to Prod Env"
-      } else {
-        Abort
+      steps {
+        if ($ {
+            env.USERNAME
+          } == 'PROCEED') {
+          echo "2183322c - Work Releases to Prod Env"
+        } else {
+          Abort
+        }
       }
+
     }
   }
 }
