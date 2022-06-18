@@ -20,12 +20,12 @@ pipeline {
           }
         )
       }
-      stage('2183322c-Stage5') {
+    }
+    stage('2183322c-Stage5') {
 
-      }
-      stage('2183322c-Stage6') {
+    }
+    stage('2183322c-Stage6') {
 
-      }
     }
   }
 }
