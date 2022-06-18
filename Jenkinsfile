@@ -14,12 +14,16 @@ pipeline {
       }
     }
     stage('2183322c-Stage3') {
+	agent {
+	docker {
+	image: '2183322c-image'
+}
+}
       steps {
-	script {
-        docker run -d --name 2183322c-test -t 2183322c-image }
-       
+
+        echo "Application Setup - 2183322c Stage 3 Completed"
       }
- echo "Application Setup - 2183322c Stage 3 Completed"
+
     }
     stage('2183322c-Stage4') {
         parallel{
